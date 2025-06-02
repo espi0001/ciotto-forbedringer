@@ -71,10 +71,13 @@ function ImageOpenSection() {
               </ImageReveal>
               <div>
                 <Copy>
-                  <p className="lg:max-w-[400px] max-w-[64ch] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
+                  <p className="lg:max-w-[400px] max-w-[64ch] mb-4">
+                    Ciotto is a café and showroom based in Copenhagen, bringing together handcrafted furniture, ceramics and coffee under one roof. <br />
+                    Every piece is made with care, reflecting a quiet and honest approach to design and hospitality.
+                  </p>
                 </Copy>
-                <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button" link="/works">
-                  GO TO WORKS
+                <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button" link="/ciotto-bar">
+                  Go to Ciotto Bar
                 </Button>
               </div>
             </div>
