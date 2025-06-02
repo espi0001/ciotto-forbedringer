@@ -14,12 +14,9 @@ export const metadata = {
   description: "Welcome to Ciotto.",
 };
 
-const loadingImages = ["/image/landing/bar(2).avif", "/image/landing/bar(1).avif", "/image/landing/stories.avif", "/image/landing/started(2).avif", "/image/landing/started(1).avif"];
-const loadingMedia = [...loadingImages, "/video/ciotto-hero-video-1.mp4"];
-
 export default function Home() {
   return (
-    <Loader loadingImages={loadingImages} loadingMedia={loadingMedia}>
+    <Loader>
       <section>
         <HeroVideo src="/video/ciotto-hero-video-1.mp4" text1="Handcrafted furniture, ceramic" text2="works and coffee bar" />
         {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
