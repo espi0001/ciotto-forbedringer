@@ -42,7 +42,7 @@ export default function Footer() {
             {/* Pages */}
             <div className="w-[100px]">
               <Copy>
-                <h3 className="text-primary-text font-bold mb-4 tracking-wide">PAGES</h3>
+                <h3 className="h3-medium text-primary-text font-bold mb-4 tracking-wide">PAGES</h3>
                 <ul className="space-y-2">
                   {/* Always show 'Works' linking to all works */}
                   <li>
@@ -65,7 +65,7 @@ export default function Footer() {
             {/* Opening Hours */}
             <div className="w-[210px]">
               <Copy startAtTenPercent={true}>
-                <h3 className="text-primary-text font-bold mb-4 tracking-wide">OPENING HOURS</h3>
+                <h3 className="h3-medium text-primary-text font-bold mb-4 tracking-wide">OPENING HOURS</h3>
               </Copy>
               <Copy startAtTenPercent={true}>
                 <div className="text-primary-text text-sm space-y-2">
@@ -82,7 +82,7 @@ export default function Footer() {
             {/* Contact Info + Social Media */}
             <div className="w-[220px]">
               <Copy startAtTenPercent={true}>
-                <h3 className="text-primary-text font-bold mb-4 tracking-wide">CONTACT INFO</h3>
+                <h3 className="h3-medium text-primary-text font-bold mb-4 tracking-wide">CONTACT INFO</h3>
               </Copy>
               <div className="text-primary-text text-sm mb-4">
                 <Copy startAtTenPercent={true}>

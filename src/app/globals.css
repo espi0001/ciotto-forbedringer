@@ -130,15 +130,41 @@ html {
   font-size: var(--fs, var(--☠️-fs-clamp, var(--fs-def, var(--fs-min, var(--fs-max)))));
 }
 
+
 h1,
 h2,
-.logo-size,
-.h2-work-details {
+.logo-size {
   text-transform: uppercase;
   line-height: 1;
 }
 
+.h1-xl {
+  --fs-max: 11.5rem;
+  --fs-min: 2.5rem;
+}
+
 h1,
+.h1-large {
+  --fs-max: 9.375rem;
+  --fs-min: 2.5rem;
+}
+
+.h1-medium {
+  --fs-max: 6.125rem;
+  --fs-min: 2.5rem;
+}
+
+
+.h1-small {
+  --fs-max: 3rem;
+  --fs-min: 1.8rem;
+}
+
+.h1-xsmall {
+  --fs-max: 1.8rem;
+  --fs-min: 1.5rem;
+}
+
 .h2-large {
   --fs-max: 9.375rem;
   --fs-min: 2.5rem;
@@ -149,56 +175,42 @@ h1,
   --fs-min: 2.5rem;
 }
 
-.hero-h1 {
-  --fs-max: 8.5rem;
-  --fs-min: 2.5rem;
-}
-
-.h1-medium {
-  --fs-max: 6.125rem;
-  --fs-min: 1.8rem;
-}
-
-.h1-small {
-  --fs-max: 3rem;
-  --fs-min: 1.8rem;
-}
-
-.h1-product {
-  --fs-max: 11.5rem;
-  --fs-min: 2.5rem;
-}
-
 h2 {
   --fs-max: 3rem;
   --fs-min: 1.2rem;
 }
 
 .h2-small {
+  --fs-max: 2.5rem;
+  --fs-min: 1.25rem;
+}
+
+.h2-xsmall {
   --fs-max: 1.13rem;
   --fs-min: 0.8rem;
   text-transform: uppercase;
 }
 
-.h2-work-details {
-  --fs-max: 1.8rem;
-  --fs-min: 1.5rem;
+
+
+.h3-large {
+  --fs-max: 1.875rem;
+  --fs-min: 1.13rem;
 }
 
-h3,
-.h3-large {
+.h3-medium {
   --fs-max: 1.5rem;
   --fs-min: 1.13rem;
 }
 
 .h3-small {
-  --fs-max: 1.1rem;
-  --fs-min: 0.8rem;
+  --fs-max: 1.25rem;
+  --fs-min: 1.13rem;
 }
 
-.h3-product {
-  --fs-max: 1.5rem;
-  --fs-min: 1.2rem;
+.h3-xsmall {
+  --fs-max: 1.1rem;
+  --fs-min: 0.8rem;
 }
 
 p,
@@ -213,6 +225,7 @@ p,
   --fs-max: 1rem;
   --fs-min: 1rem;
 }
+
 
 label {
   --fs-max: 1rem;
@@ -235,8 +248,11 @@ label {
 }
 
 .logo-size {
-  font-size: 2.25rem;
+  --fs-max: 2.25rem;
+  --fs-min: 1.625rem;
+
 }
+
 
 @media (min-width: 1024px) {
   .works-link {

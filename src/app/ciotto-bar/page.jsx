@@ -26,7 +26,7 @@ export default function CiottoBar() {
         <div className="content-center flex flex-col justify-between w-full">
           <div>
             <Copy>
-              <h2 className="mb-4">Tactile moments</h2>
+              <h2 className="h2-medium">Tactile moments</h2>
               <p>Enjoy a freshly brewed coffee made from carefully roasted Mexican beans from Komuna Coffee.</p>
               <p className="mb-2"></p>
               <p>Feel free to explore space, try the furniture, and get a sense of the materials and experience the atmosphere. IIt’s a place to slow down, look around, and stay as long as you like.</p>
@@ -45,7 +45,7 @@ export default function CiottoBar() {
               duration={0.7}
               delay={0.5}
             />
-            <h3 className="uppercase mb-3">Opening hours</h3>
+            <h3 className="h3-medium uppercase mb-3">Opening hours</h3>
 
             <OpeningHours days="Monday - Wednesday" hours="Closed" />
             <OpeningHours days="Thursday - Sunday" hours="09:00 - 16:00" />
@@ -101,7 +101,7 @@ export default function CiottoBar() {
       {/* MENUCARD */}
       <article id="menu" className="px-section section-spacing max-w-screen-2xl mx-auto flex flex-col items-center">
         <Copy>
-          <h2 className="text-center pb-[30px] md:pb-[60px]">Menu</h2>
+          <h2 className="h2-small text-center pb-[30px] md:pb-[60px]">Menu</h2>
         </Copy>
         <Image className="drop-shadow-primary" src="/image/ciottobar/menukort.svg" alt="Ciotto Bar Menu Card" width={1030} height={1320} />
       </article>

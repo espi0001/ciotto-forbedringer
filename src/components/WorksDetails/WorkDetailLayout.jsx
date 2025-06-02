@@ -40,7 +40,7 @@ export default function WorkDetailLayout({ work }) {
         <div className="col-span-1 flex flex-col justify-center space-y-6">
           <div>
             <Copy delay={1}>
-              <h2 className="h2-work-details font-bold mb-2 tracking-wide">Info:</h2>
+              <h2 className="h2-small font-bold mb-2 tracking-wide">Info:</h2>
             </Copy>
             <AnimatedLine />
             <Copy delay={1}>
@@ -49,27 +49,27 @@ export default function WorkDetailLayout({ work }) {
           </div>
           <div>
             <Copy delay={1}>
-              <h2 className="h2-work-details font-bold mb-2 tracking-wide">Details:</h2>
+              <h2 className="h2-small font-bold mb-2 tracking-wide">Details:</h2>
             </Copy>
             <AnimatedLine />
             <ul className="text-base space-y-1">
               <li className="my-2">
                 <Copy delay={1}>
-                  <h3 className="font-semibold mb-1 tracking-wide">Location</h3>
+                  <h3 className="h3-medium font-semibold mb-1 tracking-wide">Location</h3>
                   <p>{location}</p>
                 </Copy>
               </li>
               <AnimatedLine />
               <li className="my-2">
                 <Copy delay={1}>
-                  <h3 className="font-semibold mb-1 tracking-wide">Main features</h3>
+                  <h3 className="h3-medium font-semibold mb-1 tracking-wide">Main features</h3>
                   <p>{mainFeatures}</p>
                 </Copy>
               </li>
               <AnimatedLine />
               <li className="my-2">
                 <Copy delay={1}>
-                  <h3 className="font-semibold mb-1 tracking-wide">Designed by</h3>
+                  <h3 className="h3-medium font-semibold mb-1 tracking-wide">Designed by</h3>
                   <p>{by}</p>
                 </Copy>
               </li>

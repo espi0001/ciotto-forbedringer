@@ -6,7 +6,7 @@ const ProductSpecs = ({ measurements, price }) => {
     <div className="">
       <Copy startAtTenPercent={true}>
         {/* Measurements */}
-        <h3 className="uppercase font-semibold">Measurements</h3>
+        <h3 className="uppercase font-semibold h3-large">Measurements</h3>
       </Copy>
       <div className="border-y border-[#402D1F] flex flex-col justify-between py-[0.5rem] ">
         {measurements.map(({ label, value }, index) => (

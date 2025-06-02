@@ -71,7 +71,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       {relatedData && relatedData.length > 0 && (
         <div className="section-spacing">
           <Copy>
-            <h2 className="font-bold mb-6">You May Also Like</h2>
+            <h2 className="h2-small font-bold mb-6">You May Also Like</h2>
           </Copy>
           <ProductGrid
             products={relatedData.slice(0, 4).map((p) => ({

@@ -79,7 +79,7 @@ export default function ContactForm() {
           <div className="w-full text-secondary-text">
             <div className="mb-8">
               <Copy delay={0.5}>
-                <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>
+                <h2 className="h2-xsmall uppercase mb-2">Ari Prasetya</h2>
               </Copy>
               {/* Responsive h1: one line on md+, two lines on mobile/tablet */}
               <Copy delay={0.5}>

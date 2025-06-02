@@ -7,7 +7,7 @@ export default function GalleryText({ imageSrc1, imageSrc2, imageSrc3, imageSrc4
     <article className={`px-section max-w-screen-2xl mx-auto section-spacing grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
       <div className="md:order-2">
         <Copy>
-          <h2 className="mb-4">{h2}</h2>
+          <h2 className="h2-small mb-4">{h2}</h2>
           {children}
         </Copy>
       </div>

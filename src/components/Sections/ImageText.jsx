@@ -12,7 +12,7 @@ export default function ImageText({ imageSrc, altText, h2, children, reverse = f
       </div>
       <div>
         <Copy>
-          <h2 className="mb-4">{h2}</h2>
+          <h2 className="h2-small mb-4">{h2}</h2>
           {children}
         </Copy>
       </div>

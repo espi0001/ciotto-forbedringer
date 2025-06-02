@@ -12,7 +12,7 @@ const ProductColorSwatch = ({ colors = [], colorSwatch = [], selectedColor, setS
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex items-center gap-2">
-        <h3 className="uppercase font-semibold">Color:</h3>
+        <h3 className="h3-large uppercase font-semibold">Color:</h3>
         <p className="text-3xl font-normal">{selectedColor}</p>
       </div>
       <div className="flex gap-2">

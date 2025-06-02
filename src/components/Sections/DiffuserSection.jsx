@@ -11,7 +11,7 @@ function DiffuserSection() {
       <div className="px-section py-[100px] relative z-10 text-secondary-text flex flex-col">
         <div>
           <Copy>
-            <h2 className="tracking-wide mb-6 drop-shadow-lg max-w-[500px]">
+            <h2 className="h2-small tracking-wide mb-6 drop-shadow-lg max-w-[500px]">
               Feel the <br /> atmospherer <br /> in Ciotto Bar
             </h2>
           </Copy>

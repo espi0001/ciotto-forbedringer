@@ -35,7 +35,7 @@ export default function Home() {
             </h2>
           </Copy>
           <Copy>
-            <p className="h2-small uppercase">Products</p>
+            <p className="h2-xsmall uppercase">Products</p>
           </Copy>
         </div>
 
@@ -96,7 +96,7 @@ export default function Home() {
               </Copy>
             </div>
             <Copy>
-              <p className="h2-small uppercase">Works</p>
+              <p className="h2-xsmall uppercase">Works</p>
             </Copy>
           </div>
 
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_auto] md:flex md:flex-row justify-between gap-6 md:gap-16">
           <div className="col-start-2 col-span-2 row-start-1 md:flex md:flex-col md:justify-between">
             <Copy>
-              <p className="h2-small uppercase">Coffee Bar</p>
+              <p className="h2-xsmall uppercase">Coffee Bar</p>
             </Copy>
             <div className="hidden md:block">
               <ImageReveal>
