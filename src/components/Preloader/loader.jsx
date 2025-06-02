@@ -17,10 +17,22 @@ export default function Loader({ loadingImages = [], children }) {
   const [progress, setProgress] = useState(0);
   const [showCounter, setShowCounter] = useState(false);
   const [maskDone, setMaskDone] = useState(false);
+  const [shouldShowLoader, setShouldShowLoader] = useState(true);
+
+  // Only show loader once per session
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (sessionStorage.getItem("ciotto-loader-shown")) {
+        setShouldShowLoader(false);
+      } else {
+        setShouldShowLoader(true);
+      }
+    }
+  }, []);
 
   // Animate progress from 0 to 100 using GSAP with ease, after animation
   useEffect(() => {
-    if (!showCounter) return;
+    if (!showCounter || !shouldShowLoader) return;
     const progressObj = { value: 0 };
     const tween = gsap.to(progressObj, {
       value: 100,
@@ -29,10 +41,11 @@ export default function Loader({ loadingImages = [], children }) {
       onUpdate: () => setProgress(Math.floor(progressObj.value)),
     });
     return () => tween.kill();
-  }, [showCounter]);
+  }, [showCounter, shouldShowLoader]);
 
   // Entrance animation on mount (only for images and progress)
   useEffect(() => {
+    if (!shouldShowLoader) return;
     CustomEase.create("hop", ".8, 0, .3, 1");
     gsap.set(loadingImagesContainerRef.current, { height: "400px", opacity: 1 });
     gsap.set(".loading-image", { height: 0 });
@@ -49,25 +62,29 @@ export default function Loader({ loadingImages = [], children }) {
       delay: 1,
     });
     return () => tl.kill();
-  }, []);
+  }, [shouldShowLoader]);
 
   // Show the live counter after the animation (delay + duration)
   useEffect(() => {
+    if (!shouldShowLoader) return;
     const totalDelay = 1; // delay + TextAnimation duration
     const timeout = setTimeout(() => setShowCounter(true), totalDelay * 1000);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [shouldShowLoader]);
 
   // Exit animation when progress reaches 100
   useEffect(() => {
-    if (progress < 100) return;
+    if (progress < 100 || !shouldShowLoader) return;
     const tl = gsap.timeline({
       defaults: { ease: "hop" },
       onStart: () => {
         if (overlayRef.current) overlayRef.current.style.pointerEvents = "none";
       },
       onComplete: () => {
-        setMaskDone(true); // Optionally, you can use this to remove overlay after animation if desired
+        setMaskDone(true);
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("ciotto-loader-shown", "true");
+        }
       },
     });
     // Animate images out
@@ -79,9 +96,8 @@ export default function Loader({ loadingImages = [], children }) {
       },
       "+=0.5"
     );
-    // Fade out progress and text
-    tl.to([progressTextRef.current, overlayRef.current.querySelector(".loading-info")], { opacity: 0, duration: 0.75 }, "<");
-    // Animate the polygon clip-path from full rect to a line at the top (bottom to top mask)
+    // Fade out progress and text and animate mask at the same time
+    tl.to([progressTextRef.current, overlayRef.current.querySelector(".loading-info")], { opacity: 0, duration: 0.75 }, "+=0");
     tl.to(
       overlayRef.current,
       {
@@ -89,10 +105,14 @@ export default function Loader({ loadingImages = [], children }) {
         duration: 0.75,
         ease: "hop",
       },
-      "+=0"
+      "<" // start at the same time as previous
     );
     return () => tl.kill();
-  }, [progress]);
+  }, [progress, shouldShowLoader]);
+
+  if (!shouldShowLoader) {
+    return <>{children}</>;
+  }
 
   return (
     <>
