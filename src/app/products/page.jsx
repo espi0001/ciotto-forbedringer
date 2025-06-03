@@ -21,7 +21,7 @@ export default async function Products() {
   return (
     <section className="px-section">
       <article className="flex flex-col gap-8">
-        <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship, made to bring beauty and function into everyday life. Explore the collection — and discover even more pieces in Ciotto." />
+        <TitleSection title="Products" description="Handcrafted with precision and care, each product is made to order — shaped by hand, with time and attention to detail. Explore the collection below, or visit Ciotto at Godthåbsvej 18A to discover more pieces. To place an order, just reach out." />
 
         <Button withCopy delayVariant={1.5} variant="primary" link="/contact">
           Contact to purchase

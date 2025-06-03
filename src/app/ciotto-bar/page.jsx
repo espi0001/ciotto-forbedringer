@@ -27,9 +27,10 @@ export default function CiottoBar() {
           <div>
             <Copy>
               <h2 className="mb-4">Tactile moments</h2>
-              <p>Enjoy a freshly brewed coffee made from carefully roasted Mexican beans from Komuna Coffee.</p>
+              <p>Ciotto Bar is a café and a showroom where everything you see is made by hand — and made to be used.</p>
               <p className="mb-2"></p>
-              <p>Feel free to explore space, try the furniture, and get a sense of the materials and experience the atmosphere. IIt’s a place to slow down, look around, and stay as long as you like.</p>
+              <p>Enjoy a freshly brewed coffee made from Komuna Coffees Mexican beans. take a seat, explore the materials, and stay as long as you like.</p>
+              <p>If something feels right, it’s available to order.</p>
             </Copy>
             <Button className="mt-4 mb-8" startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="#menu">
               See Menu
